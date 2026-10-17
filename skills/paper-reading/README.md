@@ -12,17 +12,21 @@
 
 ## 安装
 
-将整个 `paper-reading/` 文件夹放进 Agent 识别的 Skills 目录，不要只复制 `SKILL.md`（它引用了 `references/`）。
+使用 [Vercel Skills CLI](https://github.com/vercel-labs/skills)，需要 Node.js/npm 环境：
 
-| 工具 | 个人 Skills 目录 | 项目 Skills 目录 |
-| --- | --- | --- |
-| Pi | `~/.pi/agent/skills/` 或 `~/.agents/skills/` | `.pi/skills/` 或 `.agents/skills/` |
-| Claude Code | `~/.claude/skills/` | `.claude/skills/` |
-| 其他兼容 Agent Skills 的客户端 | 参照客户端文档 | 参照客户端文档 |
+```bash
+# 在目标项目目录执行，交互选择 Agent
+npx skills add mrsibe/skills --skill paper-reading
 
-把 **整个目录** 解压/复制到相应父目录下，例如：`~/.pi/agent/skills/paper-reading/SKILL.md`。
+# 或全局安装到 Pi；其他客户端可使用 claude-code、codex、cursor
+npx skills add mrsibe/skills --skill paper-reading --global --agent pi
+```
 
-Pi 支持明确调用：
+CLI 会安装完整技能包，包括 `references/`，不需要手动复制 `SKILL.md`。多 Agent 安装、已安装列表和更新命令见[仓库安装指南](../../README.md#安装与更新)。
+
+## 使用
+
+安装后，Pi 支持明确调用：
 
 ```text
 /skill:paper-reading 帮我精读 https://arxiv.org/abs/1803.10122，重点讲解世界模型的训练与决策过程

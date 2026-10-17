@@ -23,16 +23,44 @@
 ## 当前状态
 
 - Skill 数量：**1**。
-- [paper-reading](skills/paper-reading/README.md)：论文筛选、讲解、批判性分析、比较与复现规划；安装方式见技能说明。
+- [paper-reading](skills/paper-reading/README.md)：论文筛选、讲解、批判性分析、比较与复现规划。
 - 已有[手动回归用例](tests/paper-reading/README.md)，尚未完成模型实测、效果评估或跨客户端验证。
 - 尚未配置自动测试或 CI。
-- 公开源码仓库：[mrsibe/skills](https://github.com/mrsibe/skills)。尚未发布版本或配置客户端安装。
+- 公开源码仓库：[mrsibe/skills](https://github.com/mrsibe/skills)。尚未发布版本。
+
+## 安装与更新
+
+使用 [Vercel Skills CLI](https://github.com/vercel-labs/skills)，需要本机有可运行 `npx` 的 Node.js/npm 环境，无需手动克隆仓库或复制技能目录。
+
+```bash
+# 查看仓库可安装的 Skills，不安装
+npx skills add mrsibe/skills --list
+
+# 安装到当前项目，交互选择目标 Agent
+npx skills add mrsibe/skills --skill paper-reading
+
+# 全局安装到指定 Agent（示例：Pi、Claude Code、Codex、Cursor）
+npx skills add mrsibe/skills --skill paper-reading --global \
+  --agent pi --agent claude-code --agent codex --agent cursor
+```
+
+不加 `--global` 时安装到当前项目；项目级安装应在目标项目目录执行。按实际使用的客户端保留 `--agent` 参数，或省略它以交互选择。CLI 负责安装路径及符号链接/复制方式，不需要自行维护各 Agent 的路径表。
+
+```bash
+# 查看已安装的全局 Skills
+npx skills list --global
+
+# 更新全局安装的 paper-reading
+npx skills update paper-reading --global
+```
+
+项目级查看使用 `npx skills list`，更新使用 `npx skills update paper-reading --project`。更新由 CLI 手动执行，不会在仓库推送后自动同步。安装前请审查内容；CLI 支持安装不代表已验证每个客户端中的任务效果。
 
 ## 添加 Skill
 
 参见 [CONTRIBUTING.md](CONTRIBUTING.md)。一个 Skill 应解决明确、可复用的问题，并包含触发条件、执行流程、输出要求和失败处理。仓库专属路径、业务配置与凭证不应写入通用技能。
 
-后续使用现有安装工具分发，不在本仓库开发自定义安装器。CLI 用法和客户端发现规则以各工具当前官方文档为准。
+使用 Skills CLI 分发，不在本仓库开发自定义安装器。新增 Skill 时同步维护目录和安装说明；CLI 用法和客户端支持以其官方文档为准。
 
 ## 安全与许可证
 
