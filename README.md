@@ -4,7 +4,7 @@
 
 ## 技能
 
-- [paper-reading](skills/paper-reading/README.md)：论文阅读、讲解、比较与复现规划（待实测）。
+- [paper-reading](skills/paper-reading/README.md)：论文阅读、讲解、比较与复现规划。
 
 ## 安装与更新
 
@@ -22,4 +22,4 @@ npx skills update paper-reading
 
 ## 其他
 
-[贡献指南](CONTRIBUTING.md) · [测试用例](tests/paper-reading/README.md) · [MIT License](LICENSE)
+[贡献指南](CONTRIBUTING.md) · [MIT License](LICENSE)
