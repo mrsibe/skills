@@ -1,6 +1,6 @@
 # Skill 测试
 
-当前没有 Skill，也没有测试用例或自动化测试执行器。
+当前已有 [paper-reading 手动回归用例](paper-reading/README.md)，尚未运行模型行为评测，也没有自动化测试执行器。
 
 后续按 `tests/<skill-name>/` 组织资料，每个 Skill 至少记录：
 

@@ -3,8 +3,8 @@
 ## Scope
 
 This is a personal, cross-agent Skills library, not an Agent framework.
-The repository is currently scaffold-only. Do not add skills, example skills,
-or placeholder SKILL.md files unless explicitly requested.
+The repository currently contains the paper-reading skill. Do not add new skills,
+example skills, or placeholder SKILL.md files unless explicitly requested.
 
 ## Layout
 
@@ -18,9 +18,10 @@ runtime dependencies only when required.
 
 ## Validation and safety
 
-There is currently no test runner, build command or CI. Do not invent commands
-or claim an empty repository has passed skill validation. Introduce appropriate
-checks alongside the first skill and document how to run them.
+There is currently no automated test runner, build command or CI. Manual regression
+cases and their execution protocol are in tests/paper-reading/README.md. Do not
+invent commands or treat unexecuted cases as passed. Distinguish static validation
+from model behavior, effectiveness and cross-client testing.
 
 Never execute bundled scripts without inspecting them. Do not add secrets,
 private business data, global installations, or unrelated tooling. Commits,
