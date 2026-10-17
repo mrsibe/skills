@@ -3,17 +3,18 @@
 ## Scope
 
 This is a personal, cross-agent Skills library, not an Agent framework.
-The repository currently contains the paper-reading skill. Do not add new skills,
-example skills, or placeholder SKILL.md files unless explicitly requested.
+See README.md for the current skill list. Do not add new skills, example skills,
+or placeholder SKILL.md files unless explicitly requested.
 
 ## Layout
 
-- `skills/<skill-name>/SKILL.md`: future skill entry points, one level deep.
+- `skills/<skill-name>/SKILL.md`: skill entry points, one level deep.
 - `CONTRIBUTING.md`: authoring and validation conventions.
 
 Read `CONTRIBUTING.md` before adding or changing a skill. Keep reusable methods
 separate from project-specific configuration. Add optional directories and
-runtime dependencies only when required.
+runtime dependencies only when required. Keep the README skill list up to date
+and use Skills CLI for installation instructions instead of client path tables.
 
 ## Validation and safety
 

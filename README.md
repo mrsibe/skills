@@ -5,6 +5,7 @@
 ## 技能
 
 - [paper-reading](skills/paper-reading/README.md)：论文阅读、讲解、比较与复现规划。
+- [independent-research](skills/independent-research/README.md)：基于一手资料、反证与适用边界的独立调研。
 
 ## 安装与更新
 
@@ -14,7 +15,7 @@
 npx skills add mrsibe/skills --skill paper-reading
 ```
 
-默认安装到当前项目，交互选择 Agent；加 `--global` 可全局安装。
+将 `paper-reading` 替换为所需技能名。默认安装到当前项目，交互选择 Agent；加 `--global` 可全局安装。
 
 ```bash
 npx skills update paper-reading
