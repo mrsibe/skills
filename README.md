@@ -6,6 +6,7 @@
 
 - [paper-reading](skills/paper-reading/README.md)：论文阅读、讲解、比较与复现规划。
 - [independent-research](skills/independent-research/README.md)：基于一手资料、反证与适用边界的独立调研。
+- [refactoring-ui](skills/refactoring-ui/README.md)：界面视觉诊断、改造与设计体系建立。
 
 ## 安装与更新
 
